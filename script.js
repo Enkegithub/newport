@@ -1,7 +1,5 @@
 const clockElement = document.querySelector("#live-clock");
 const filterChips = document.querySelectorAll(".filter-chip");
-const projectItems = document.querySelectorAll(".project-item");
-const projectToggles = document.querySelectorAll(".project-toggle");
 const projectList = document.querySelector("#project-list");
 const educationPanel = document.querySelector("#education-panel");
 const activityGrid = document.querySelector("#activity-grid");
@@ -21,6 +19,57 @@ const certificateModalId = document.querySelector("#certificate-modal-id");
 const certificateModalPreview = document.querySelector("#certificate-modal-preview");
 const certificateModalDesc = document.querySelector("#certificate-modal-desc");
 const certificateModalLink = document.querySelector("#certificate-modal-link");
+
+const projects = [
+  {
+    title: "Thumbnails.pro",
+    year: "2024",
+    type: "utility",
+    image: "./assets/projects/thumbnails-pro.svg",
+    desc: "Generate thumbnail concepts, text treatments, and layout directions for creators in minutes.",
+    link: "https://thumbnails.pro",
+  },
+  
+  {
+    title: "Sajilo Coding Mobile App",
+    year: "2022",
+    type: "utility",
+    image: "./assets/projects/sajilo-coding.svg",
+    desc: "This application helps students learn programming languages like Java, C, and Python through unit-wise lessons and practice tutorials.",
+    link: "#",
+  },
+  {
+    title: "ISkincare.ai",
+    year: "2024",
+    type: "ai",
+    image: "./assets/projects/skintype.png",
+    desc: "An AI-powered skincare recommendation system that analyzes facial images, detects skin type, and suggests suitable products with reported 88% accuracy.",
+    link: "https://myskincare.vercel.app/",
+  },
+  {
+    title: "Nefoli Lifesavers",
+    year: "2021",
+    type: "research",
+    researchTitle: "Nefoli Lifesavers: A Web-Based Blood Donation System",
+    paperLink: "https://enkegithub.github.io/niteshkushwaha/img/bload.png",
+  },
+  {
+    title: "Bhokh Lagyo",
+    year: "2022",
+    type: "utility",
+    image: "./assets/projects/bhokh-lagyo.svg",
+    desc: "This web app simplifies food ordering from the table, reduces waiter dependency, and improves service speed through digital ordering.",
+    link: "#",
+  },
+  {
+    title: "Maya",
+    year: "2025",
+    type: "research",
+    researchTitle: "Info Hub: An Investment Matchmaking Platform for Founders and Investors",
+    paperLink: "#",
+  },
+
+];
 
 function applyTheme(theme) {
   document.body.dataset.theme = theme;
@@ -59,6 +108,111 @@ function updateClock() {
   clockElement.textContent = formatter.format(new Date());
 }
 
+function createProjectItem(project) {
+  const article = document.createElement("article");
+  article.className = "project-item";
+  article.dataset.tags = project.type;
+  article.dataset.expanded = "false";
+
+  const button = document.createElement("button");
+  button.className = "project-toggle";
+  button.type = "button";
+  button.setAttribute("aria-expanded", "false");
+
+  const icon = document.createElement("span");
+  icon.className = "toggle-icon";
+  icon.setAttribute("aria-hidden", "true");
+  icon.textContent = "+";
+
+  const name = document.createElement("span");
+  name.className = "project-name";
+  name.textContent = project.title;
+
+  const year = document.createElement("span");
+  year.className = "project-year";
+  year.textContent = project.year;
+
+  const panel = document.createElement("div");
+  panel.className = "project-panel";
+
+  if (project.type === "research") {
+    const detail = document.createElement("div");
+    detail.className = "paper-detail";
+
+    const titleRow = document.createElement("div");
+    titleRow.className = "paper-row";
+
+    const titleLabel = document.createElement("span");
+    titleLabel.className = "paper-label";
+    titleLabel.textContent = "Research Title";
+
+    const titleValue = document.createElement("strong");
+    titleValue.textContent = project.researchTitle || project.title;
+
+    titleRow.append(titleLabel, titleValue);
+
+    const linkRow = document.createElement("div");
+    linkRow.className = "paper-row";
+
+    const linkLabel = document.createElement("span");
+    linkLabel.className = "paper-label";
+    linkLabel.textContent = "Page Link";
+
+    const linkValue = document.createElement("a");
+    linkValue.href = project.paperLink || "#";
+    linkValue.target = "_blank";
+    linkValue.rel = "noreferrer";
+    linkValue.textContent = project.paperLink && project.paperLink !== "#" ? project.paperLink : "Add page link here";
+
+    linkRow.append(linkLabel, linkValue);
+    detail.append(titleRow, linkRow);
+    panel.appendChild(detail);
+  } else {
+    const imageFrame = document.createElement("div");
+    imageFrame.className = "project-image-frame";
+
+    const image = document.createElement("img");
+    image.className = "project-image";
+    image.src = project.image;
+    image.alt = `${project.title} preview`;
+
+    imageFrame.appendChild(image);
+
+    const desc = document.createElement("p");
+    desc.textContent = project.desc;
+
+    const links = document.createElement("div");
+    links.className = "project-links";
+
+    const liveLink = document.createElement("a");
+    liveLink.href = project.link || "#";
+    liveLink.target = "_blank";
+    liveLink.rel = "noreferrer";
+    liveLink.textContent = "Live Preview";
+
+    const typeLabel = document.createElement("span");
+    typeLabel.className = "project-link-type";
+    typeLabel.textContent = `Type: ${project.type.charAt(0).toUpperCase()}${project.type.slice(1)}`;
+
+    links.append(liveLink, typeLabel);
+    panel.append(imageFrame, desc, links);
+  }
+
+  button.append(icon, name, year);
+  article.append(button, panel);
+
+  return article;
+}
+
+function renderProjects() {
+  if (!projectList) return;
+
+  projectList.innerHTML = "";
+  projects.forEach((project) => {
+    projectList.appendChild(createProjectItem(project));
+  });
+}
+
 function applyFilter(filter) {
   const showEducation = filter === "education";
 
@@ -74,6 +228,7 @@ function applyFilter(filter) {
     return;
   }
 
+  const projectItems = projectList ? projectList.querySelectorAll(".project-item") : [];
   projectItems.forEach((item) => {
     const tags = (item.dataset.tags || "").split(" ");
     const shouldShow = filter === "all" || tags.includes(filter);
@@ -89,8 +244,11 @@ filterChips.forEach((chip) => {
   });
 });
 
-projectToggles.forEach((toggle) => {
-  toggle.addEventListener("click", () => {
+if (projectList) {
+  projectList.addEventListener("click", (event) => {
+    const toggle = event.target.closest(".project-toggle");
+    if (!toggle) return;
+
     const project = toggle.closest(".project-item");
     if (!project) return;
 
@@ -98,7 +256,7 @@ projectToggles.forEach((toggle) => {
     project.dataset.expanded = String(!isExpanded);
     toggle.setAttribute("aria-expanded", String(!isExpanded));
   });
-});
+}
 
 function formatCertificateTitle(filename) {
   return filename
@@ -305,7 +463,9 @@ if (themeToggle) {
 }
 
 initializeTheme();
+renderProjects();
 updateClock();
 buildActivityGraph();
 loadCertificates();
+applyFilter("all");
 setInterval(updateClock, 1000);

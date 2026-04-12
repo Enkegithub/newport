@@ -22,66 +22,89 @@ export const educationSteps = [
 ];
 
 export const projects = [
+  // Normal projects: update title, image, links, and features here.
   {
     id: 'thumbnails-pro',
     type: 'utility',
-    name: 'Thumbnails.pro',
+    title: 'Thumbnails.pro',
     mark: '[new]',
     year: '2024',
     image: '/assets/projects/thumbnails-pro.svg',
     imageAlt: 'Thumbnails.pro preview',
-    description:
+    desc:
       'Generate thumbnail concepts, text treatments, and layout directions for creators in minutes.',
-    liveUrl: 'https://thumbnails.pro',
+    links: [{ label: 'Live Preview', href: 'https://thumbnails.pro' }],
+    features: ['AI thumbnail ideas', 'Fast creator workflow', 'Text and layout suggestions'],
   },
   {
     id: 'sajilo-coding',
     type: 'utility',
-    name: 'Sajilo Coding Mobile App',
+    title: 'Sajilo Coding Mobile App',
     year: '2022',
-    image: '/assets/projects/sajilo-coding.svg',
+    image: '/assets/projects/sajilo.png',
     imageAlt: 'Sajilo Coding Mobile App preview',
-    description:
+    desc:
       'This application helps students learn programming languages like Java, C, and Python through unit-wise lessons and practice tutorials.',
-    liveUrl: '#',
+    links: [{ label: 'Live Preview', href: '#' }],
+    features: ['Unit-wise lessons', 'Programming examples', 'Beginner-friendly practice'],
   },
-  {
-    id: 'nefoli-lifesavers',
-    type: 'research',
-    name: 'Nefoli Lifesavers',
-    year: '2021',
-    researchTitle: 'Nefoli Lifesavers: A Web-Based Blood Donation System',
-    pageUrl: '#',
-  },
+  
   {
     id: 'bhokh-lagyo',
     type: 'utility',
-    name: 'Bhokh Lagyo',
+    title: 'Bhokh Lagyo',
     year: '2022',
-    image: '/assets/projects/bhokh-lagyo.svg',
+    image: '/assets/projects/bhokh.png',
     imageAlt: 'Bhokh Lagyo preview',
-    description:
+    desc:
       'This web app simplifies food ordering from the table, reduces waiter dependency, and improves service speed through digital ordering.',
-    liveUrl: '#',
+    links: [{ label: 'Live Preview', href: '#' }],
+    features: ['Table ordering flow', 'Digital menu system', 'Faster restaurant service'],
+  },
+
+  {
+    id: 'Nefoli Lifesavers',
+    type: 'utility',
+    title: 'Nefoli Lifesavers',
+    year: '2021',
+    image: '/assets/projects/nefoli.png',
+    imageAlt: 'Nefoli Lifesavers preview',
+    desc:
+      'A web-based blood donation system that connects donors and recipients, streamlining the process of finding and donating blood.',
+    links: [{ label: 'Live Preview', href: '#' }],
+    features: ['Donor-recipient matching', 'Blood type filtering', 'Donation scheduling'],
   },
   {
     id: 'iskincare-ai',
     type: 'ai',
-    name: 'ISkincare.ai',
+    title: 'ISkincare.ai',
     year: '2024',
-    image: '/assets/projects/iskincare-ai.svg',
+    image: '/assets/projects/skintype.png',
     imageAlt: 'ISkincare.ai preview',
-    description:
+    desc:
       'An AI-powered skincare recommendation system that analyzes facial images, detects skin type, and suggests suitable products with reported 88% accuracy.',
-    liveUrl: '#',
+    links: [{ label: 'Live Preview', href: 'https://myskincare.vercel.app/' }],
+    features: ['Skin-type detection', 'AI-powered analysis', 'Product recommendation flow'],
   },
   {
-    id: 'info-hub',
+    id: 'Info Hub',
+    type: 'utility',
+    title: 'Info Hub',
+    year: '2023',
+    image: '/assets/projects/info.png',
+    imageAlt: 'Info Hub preview',
+    desc:
+      'A digital platform that connects startup founders with investors using AI-based matching. Founders showcase their ideas and funding needs, while investors set their preferences. The system recommends the best matches, enabling faster, smarter, and more efficient fundraising.',
+    links: [{ label: 'Live Preview', href: '#' }],
+    features: ['Online live pitching weekly', 'Investors and founders directly interact.',],
+  },
+  {
+    id: 'Blockchain',
     type: 'research',
-    name: 'Info Hub',
+    title: 'Performance and Security Analysis of Blockchain-Based Decentralized Cloud Storage Systems ',
     year: '2025',
-    researchTitle: 'Info Hub: An Investment Matchmaking Platform for Founders and Investors',
-    pageUrl: '#',
+    researchTitle: 'Performance and Security Analysis of Blockchain-Based Decentralized Cloud Storage Systems ',
+    paperLink: '#',
   },
 ];
 

@@ -195,6 +195,10 @@ body[data-theme="dark"] {
 }
 
 .section-heading--summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
   list-style: none;
   cursor: pointer;
 }
@@ -211,12 +215,20 @@ body[data-theme="dark"] {
   display: none;
 }
 
+.section-toggle__open-text,
+.section-toggle__closed-text {
+  display: inline;
+}
+
 .section-heading .section-divider {
   flex: 1;
   margin-bottom: 0;
 }
 
 .section-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   flex-shrink: 0;
   padding: 6px 10px;
   border: 1px solid rgba(212, 205, 195, 0.85);
@@ -1166,6 +1178,61 @@ a:hover {
   font-weight: 700;
 }
 
+.project-card__head {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 14px;
+  margin-bottom: 10px;
+}
+
+.project-card__kicker {
+  margin: 0 0 4px;
+  color: #6c7282;
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.project-card__title {
+  margin: 0;
+  font-family: var(--heading-font);
+  font-size: 1rem;
+  font-style: italic;
+  color: var(--accent);
+}
+
+.project-card__features {
+  display: grid;
+  gap: 8px;
+}
+
+.project-feature-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.project-feature-chip {
+  padding: 6px 10px;
+  border: 1px solid rgba(212, 205, 195, 0.8);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.72);
+  color: #5d6373;
+  font-size: 0.74rem;
+  font-weight: 700;
+}
+
+.paper-detail--card {
+  gap: 10px;
+  padding: 12px 0 4px;
+}
+
+.paper-detail--card .paper-row p {
+  margin: 0;
+}
+
 .tech-section {
   width: min(100%, var(--page-width));
   margin: 0 auto;
@@ -1535,7 +1602,8 @@ body[data-theme="dark"] .utility-label {
 
 body[data-theme="dark"] .section-toggle,
 body[data-theme="dark"] .filter-chip,
-body[data-theme="dark"] .site-footer__links a {
+body[data-theme="dark"] .site-footer__links a,
+body[data-theme="dark"] .project-feature-chip {
   border-color: var(--soft-border);
   background: var(--soft-bg);
   color: var(--soft-text);

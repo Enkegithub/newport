@@ -246,48 +246,104 @@ export default function PortfolioPage() {
 
           <div className='project-list' id='project-list'>
             {projects.map((project) => {
+              const displayTitle = project.title || project.name;
+              const displayDescription = project.desc || project.description;
+              const displayLinks =
+                project.links ||
+                (project.link ? [{ label: 'Live Preview', href: project.link }] : []);
+              const researchDetails = project.details || [
+                {
+                  label: 'Paper Title',
+                  kind: 'title',
+                  value: project.researchTitle || displayTitle,
+                },
+                {
+                  label: 'Page Link',
+                  kind: 'link',
+                  href: project.paperLink || '#',
+                  text:
+                    project.paperLink && project.paperLink !== '#'
+                      ? project.paperLink
+                      : 'Add page link here',
+                },
+              ];
+
               return (
-                <details className='project-item' data-tags={project.type} key={project.id}>
+                <details
+                  className='project-item'
+                  data-tags={project.type}
+                  key={project.id || `${project.type}-${displayTitle}-${project.year}`}
+                >
                   <summary className='project-toggle'>
                     <span className='toggle-icon' aria-hidden='true'>
                       +
                     </span>
                     <span className='project-name'>
-                      {project.name}
+                      {displayTitle}
                       {project.mark ? <span className='project-mark'> {project.mark}</span> : null}
                     </span>
                     <span className='project-year'>{project.year}</span>
                   </summary>
 
-                  <div className='project-panel'>
-                    {project.type === 'research' ? (
-                      <div className='paper-detail'>
-                        <div className='paper-row'>
-                          <span className='paper-label'>Research Title</span>
-                          <strong>{project.researchTitle}</strong>
+                  {project.type === 'research' ? (
+                    <div className='project-panel'>
+                      <div className='paper-detail paper-detail--card'>
+                        {researchDetails.map((detail) => (
+                          <div className='paper-row' key={`${project.id}-${detail.label}`}>
+                            <span className='paper-label'>{detail.label}</span>
+                            {detail.kind === 'title' ? (
+                              <strong>{detail.value}</strong>
+                            ) : detail.kind === 'link' ? (
+                              <a href={detail.href} target='_blank' rel='noreferrer'>
+                                {detail.text || detail.href}
+                              </a>
+                            ) : (
+                              <p>{detail.value}</p>
+                            )}
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  ) : (
+                    <div className='project-panel'>
+                      <div className='project-card__head'>
+                        <div>
+                          <p className='project-card__kicker'>{project.type.toUpperCase()}</p>
+                          <h3 className='project-card__title'>
+                            {displayTitle}
+                            {project.mark ? <span className='project-mark'> {project.mark}</span> : null}
+                          </h3>
                         </div>
-                        <div className='paper-row'>
-                          <span className='paper-label'>Page Link</span>
-                          <a href={project.pageUrl} target='_blank' rel='noreferrer'>
-                            {project.pageUrl === '#' ? 'Add page link here' : project.pageUrl}
-                          </a>
+                        <span className='project-year'>{project.year}</span>
+                      </div>
+
+                      <div className='project-image-frame'>
+                        <img className='project-image' src={project.image} alt={project.imageAlt} />
+                      </div>
+
+                      <p>{displayDescription}</p>
+
+                      <div className='project-card__features'>
+                        <span className='paper-label'>Features</span>
+                        <div className='project-feature-list'>
+                          {project.features?.map((feature) => (
+                            <span className='project-feature-chip' key={feature}>
+                              {feature}
+                            </span>
+                          ))}
                         </div>
                       </div>
-                    ) : (
-                      <>
-                        <div className='project-image-frame'>
-                          <img className='project-image' src={project.image} alt={project.imageAlt} />
-                        </div>
-                        <p>{project.description}</p>
-                        <div className='project-links'>
-                          <a href={project.liveUrl} target='_blank' rel='noreferrer'>
-                            Live Preview
+
+                      <div className='project-links'>
+                        {displayLinks.map((link) => (
+                          <a href={link.href} key={`${project.id}-${link.label}`} target='_blank' rel='noreferrer'>
+                            {link.label}
                           </a>
-                          <span className='project-link-type'>Type: {project.type.toUpperCase()}</span>
-                        </div>
-                      </>
-                    )}
-                  </div>
+                        ))}
+                        <span className='project-link-type'>Type: {project.type.toUpperCase()}</span>
+                      </div>
+                    </div>
+                  )}
                 </details>
               );
             })}

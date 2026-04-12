@@ -62,7 +62,9 @@
 
     projectItems.forEach(function (item) {
       var tags = (item.getAttribute("data-tags") || "").split(" ");
-      var shouldShow = filter === "all" || tags.indexOf(filter) !== -1;
+      var shouldShow =
+        (filter === "all" && tags.indexOf("research") === -1) ||
+        (filter !== "all" && tags.indexOf(filter) !== -1);
       item.classList.toggle("is-hidden", !shouldShow);
     });
   }
