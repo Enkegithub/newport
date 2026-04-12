@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nitesh</title>
+    <meta
+      name="description"
+      content="A minimal editorial portfolio inspired by the reference layout."
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page-noise" aria-hidden="true"></div>
+
+    <main class="portfolio-shell">
+      <header class="hero">
+        <div class="hero-topbar">
+          <p class="eyebrow">Personal Portfolio</p>
+          <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle theme">
+            Dark Mode
+          </button>
+        </div>
+        <h1>
+          Nitesh Kushwaha
+          <span class="verified-badge" aria-label="Verified profile" title="Verified profile">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M12 2.5l2.14 2.12 2.97-.15.96 2.82 2.61 1.41-1.12 2.75 1.12 2.75-2.61 1.41-.96 2.82-2.97-.15L12 21.5l-2.14-2.12-2.97.15-.96-2.82-2.61-1.41 1.12-2.75-1.12-2.75 2.61-1.41.96-2.82 2.97.15L12 2.5z"
+                fill="currentColor"
+              />
+              <path
+                d="M9.72 12.9l1.54 1.54 3.56-4.02"
+                fill="none"
+                stroke="#fff"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+            </svg>
+          </span>
+        </h1>
+        <p class="tagline">असाध्यं नास्ति लोकेऽत्र।</p>
+      </header>
+
+      <section class="section-block" aria-labelledby="highlights-title">
+        <div class="section-divider">
+          <span class="divider-line"></span>
+          <span class="divider-label" id="highlights-title">Highlights</span>
+        </div>
+
+        <div class="copy-stack">
+          <p>
+            Self-taught
+            <strong> Full-Stack Software Developer</strong>
+            <span class="inline-badge">🕉️</span>
+            APP & ML enthusiast, 
+          </p>
+          <p>
+            Major Products:
+            <a href="#" aria-label="Visit IconifyAI">IconifyAI.com</a>,
+            <a href="#" aria-label="Visit Thumbnails Pro">Thumbnails.pro</a>
+          </p>
+          <p>
+            Contect me at 
+            <a href="mailto:niteshkushwaha484@gmail.com">niteshkushwaha484@gmail.com</a>
+          </p>
+        </div>
+      </section>
+
+      <section class="section-block" aria-labelledby="info-title">
+        <div class="section-divider">
+          <span class="divider-line"></span>
+          <span class="divider-label" id="info-title">Info</span>
+        </div>
+
+        <div class="info-grid">
+          <div class="info-copy">
+            <p>
+              <span class="meta-label">NP</span>
+               <img
+                class="flag-badge"
+                src="https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_Nepal.svg"
+                alt="Flag of Nepal"
+              />
+              Nepal
+              <span class="separator-dot">&middot;</span>
+              <span id="live-clock">--:--:--</span>
+            </p>
+            <p>Birthday: sept 29, 2001 <span class="separator-dot">&middot;</span></p>
+            <p>I’m a Computer Science student & full-stack developer passionate about building AI-powered applications, mobile apps, and innovative startup solutions.</p>
+            <p>
+              Recently 
+              <strong>focused on</strong>
+              AI systems, automation tools, and scalable app development.
+            </p>
+            <p>
+              I share my ideas on
+              <a href="#" aria-label="Open Twitter profile">Twitter / X</a>
+              and visuals on
+              <a href="#" aria-label="Open Instagram profile">Instagram</a>.
+            </p>
+            <p class="calendar-line">
+              Schedule a call?
+              <a href="#" class="calendar-link" aria-label="Open calendar">Calendar</a>
+            </p>
+          </div>
+
+          <aside class="now-card" aria-label="Now building">
+            <p class="card-kicker">Now Building</p>
+            <h2>Quiet products with loud outcomes.</h2>
+            <p>
+              Shipping small experiments around AI tooling, interface polish, and creator workflows.
+            </p>
+            <div class="status-row">
+              <span class="status-dot"></span>
+              Available for collaborations
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section-block" aria-labelledby="certificates-title">
+        <div class="section-heading">
+          <div class="section-divider">
+            <span class="divider-line"></span>
+            <span class="divider-label" id="certificates-title">Certificates</span>
+          </div>
+          <button
+            class="section-toggle"
+            id="certificate-section-toggle"
+            type="button"
+            aria-expanded="true"
+            aria-controls="certificate-content"
+          >
+            Hide +
+          </button>
+        </div>
+
+        <div class="certificate-content" id="certificate-content">
+          <div class="certificate-intro">
+          <!-- <p>
+            Drop your PDF, JPG, JPEG, PNG, or WEBP certificates into the <strong>certificate</strong> folder and
+            this section can render them as a visual wall.
+          </p>
+          <p>
+            After adding new files, run <strong>refresh-certificates.cmd</strong> to update the gallery.
+          </p> -->
+          </div>
+
+          <div class="certificate-wall" id="certificate-wall"></div>
+          <!-- <p class="certificate-empty-state" id="certificate-empty-state">
+          No certificate files found yet. Add files to <strong>/certificate</strong> and regenerate the manifest.
+          </p> -->
+        </div>
+      </section>
+
+      <section class="section-block" aria-labelledby="experiments-title">
+        <div class="section-divider">
+          <span class="divider-line"></span>
+          <span class="divider-label" id="experiments-title">My Projects</span>
+        </div>
+
+        <div class="toolbar" role="tablist" aria-label="Project filters">
+          <button class="filter-chip is-active" data-filter="all" type="button">All</button>
+          <button class="filter-chip" data-filter="ai" type="button">AI</button>
+          <button class="filter-chip" data-filter="research" type="button">Research Paper</button>
+          <button class="filter-chip" data-filter="education" type="button">Education</button>
+          <button class="filter-chip" data-filter="utility" type="button">Utility</button>
+        </div>
+
+        <section class="education-panel" id="education-panel" aria-label="Education overview" hidden>
+          <div class="education-timeline">
+            <article class="education-step">
+              <span class="education-step__year">2020-2023</span>
+              <div class="education-step__dot" aria-hidden="true"></div>
+              <div class="education-step__content">
+                <p class="education-step__label">Diploma</p>
+                <h3>RK UNIVERSITY</h3>
+                <p>Computer Engineering</p>
+              </div>
+            </article>
+
+            <article class="education-step">
+              <span class="education-step__year">2023-2027</span>
+              <div class="education-step__dot" aria-hidden="true"></div>
+              <div class="education-step__content">
+                <p class="education-step__label">B.Tech Program</p>
+                <h3>GURU NANAK INSTITUTE OF TECHNOLOGY</h3>
+                <p>Computer Science and Engineering</p>
+              </div>
+            </article>
+
+            <article class="education-step">
+              <span class="education-step__year">...</span>
+              <div class="education-step__dot" aria-hidden="true"></div>
+              <div class="education-step__content">
+                <p class="education-step__label">Master's</p>
+                <h3>Master's Degree</h3>
+                <p>..... soon</p>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <div class="project-list" id="project-list">
+          <article class="project-item" data-tags="utility" data-expanded="false">
+            <button class="project-toggle" type="button" aria-expanded="false">
+              <span class="toggle-icon" aria-hidden="true">+</span>
+              <span class="project-name">Thumbnails.pro <span class="project-mark">[new]</span></span>
+              <span class="project-year">2024</span>
+            </button>
+            <div class="project-panel">
+              <div class="project-image-frame">
+                <img class="project-image" src="./assets/projects/thumbnails-pro.svg" alt="Thumbnails.pro preview" />
+              </div>
+              <p>Generate thumbnail concepts, text treatments, and layout directions for creators in minutes.</p>
+              <div class="project-links">
+                <a href="https://thumbnails.pro" target="_blank" rel="noreferrer">Live Preview</a>
+                <span class="project-link-type">Type: Utility</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-item" data-tags="utility" data-expanded="false">
+            <button class="project-toggle" type="button" aria-expanded="false">
+              <span class="toggle-icon" aria-hidden="true">+</span>
+              <span class="project-name">Sajilo Coding Mobile App</span>
+              <span class="project-year">2022</span>
+            </button>
+            <div class="project-panel">
+              <div class="project-image-frame">
+                <img class="project-image" src="./assets/projects/sajilo-coding.svg" alt="Sajilo Coding Mobile App preview" />
+              </div>
+              <p>This application helps students learn programming languages like Java, C, and Python through unit-wise lessons and practice tutorials.</p>
+              <div class="project-links">
+                <a href="#" target="_blank" rel="noreferrer">Live Preview</a>
+                <span class="project-link-type">Type: Utility</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-item" data-tags="research" data-expanded="false">
+            <button class="project-toggle" type="button" aria-expanded="false">
+              <span class="toggle-icon" aria-hidden="true">+</span>
+              <span class="project-name">Nefoli Lifesavers</span>
+              <span class="project-year">2021</span>
+            </button>
+            <div class="project-panel">
+              <div class="paper-detail">
+                <div class="paper-row">
+                  <span class="paper-label">Research Title</span>
+                  <strong>Nefoli Lifesavers: A Web-Based Blood Donation System</strong>
+                </div>
+                <div class="paper-row">
+                  <span class="paper-label">Page Link</span>
+                  <a href="#" target="_blank" rel="noreferrer">Add page link here</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-item" data-tags="utility" data-expanded="false">
+            <button class="project-toggle" type="button" aria-expanded="false">
+              <span class="toggle-icon" aria-hidden="true">+</span>
+              <span class="project-name">Bhokh Lagyo</span>
+              <span class="project-year">2022</span>
+            </button>
+            <div class="project-panel">
+              <div class="project-image-frame">
+                <img class="project-image" src="./assets/projects/bhokh-lagyo.svg" alt="Bhokh Lagyo preview" />
+              </div>
+              <p>This web app simplifies food ordering from the table, reduces waiter dependency, and improves service speed through digital ordering.</p>
+              <div class="project-links">
+                <a href="#" target="_blank" rel="noreferrer">Live Preview</a>
+                <span class="project-link-type">Type: Utility</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-item" data-tags="ai" data-expanded="false">
+            <button class="project-toggle" type="button" aria-expanded="false">
+              <span class="toggle-icon" aria-hidden="true">+</span>
+              <span class="project-name">ISkincare.ai</span>
+              <span class="project-year">2024</span>
+            </button>
+            <div class="project-panel">
+              <div class="project-image-frame">
+                <img class="project-image" src="./assets/projects/iskincare-ai.svg" alt="ISkincare.ai preview" />
+              </div>
+              <p>An AI-powered skincare recommendation system that analyzes facial images, detects skin type, and suggests suitable products with reported 88% accuracy.</p>
+              <div class="project-links">
+                <a href="#" target="_blank" rel="noreferrer">Live Preview</a>
+                <span class="project-link-type">Type: AI</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-item" data-tags="research" data-expanded="false">
+            <button class="project-toggle" type="button" aria-expanded="false">
+              <span class="toggle-icon" aria-hidden="true">+</span>
+              <span class="project-name">Info Hub</span>
+              <span class="project-year">2025</span>
+            </button>
+            <div class="project-panel">
+              <div class="paper-detail">
+                <div class="paper-row">
+                  <span class="paper-label">Research Title</span>
+                  <strong>Info Hub: An Investment Matchmaking Platform for Founders and Investors</strong>
+                </div>
+                <div class="paper-row">
+                  <span class="paper-label">Page Link</span>
+                  <a href="#" target="_blank" rel="noreferrer">Add page link here</a>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <section class="section-block tech-section" aria-labelledby="tech-title">
+      <div class="section-divider">
+        <span class="divider-line"></span>
+        <span class="divider-label" id="tech-title">Tech Stack</span>
+      </div>
+
+      <div class="tech-stack-shell">
+        <div class="tech-stack-track" aria-label="Technology stack">
+          <div class="tech-stack-row">
+            <div class="tech-item" data-tech="HTML5"><span class="tech-glyph"><img class="tech-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5 logo" loading="lazy" /></span></div>
+            <div class="tech-item" data-tech="CSS3"><span class="tech-glyph"><img class="tech-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3 logo" loading="lazy" /></span></div>
+            <div class="tech-item" data-tech="JavaScript"><span class="tech-glyph"><img class="tech-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript logo" loading="lazy" /></span></div>
+            <div class="tech-item" data-tech="TypeScript"><span class="tech-glyph"><img class="tech-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript logo" loading="lazy" /></span></div>
+            <div class="tech-item" data-tech="React"><span class="tech-glyph"><img class="tech-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React logo" loading="lazy" /></span></div>
+            <div class="tech-item" data-tech="Next.js"><span class="tech-glyph"><img class="tech-logo tech-logo--invert" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" alt="Next.js logo" loading="lazy" /></span></div>
+            <div class="tech-item" data-tech="Node.js"><span class="tech-glyph"><img class="tech-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js logo" loading="lazy" /></span></div>
+            <div class="tech-item" data-tech="Express"><span class="tech-glyph"><img class="tech-logo tech-logo--invert" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express logo" loading="lazy" /></span></div>
+            <div class="tech-item" data-tech="MongoDB"><span class="tech-glyph"><img class="tech-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB logo" loading="lazy" /></span></div>
+            <div class="tech-item" data-tech="MySQL"><span class="tech-glyph"><img class="tech-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL logo" loading="lazy" /></span></div>
+            <div class="tech-item" data-tech="Python"><span class="tech-glyph"><img class="tech-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python logo" loading="lazy" /></span></div>
+            <div class="tech-item" data-tech="Java"><span class="tech-glyph"><img class="tech-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java logo" loading="lazy" /></span></div>
+            <div class="tech-item" data-tech="Git"><span class="tech-glyph"><img class="tech-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git logo" loading="lazy" /></span></div>
+            <div class="tech-item" data-tech="GitHub"><span class="tech-glyph"><img class="tech-logo tech-logo--invert" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub logo" loading="lazy" /></span></div>
+            <div class="tech-item" data-tech="Docker"><span class="tech-glyph"><img class="tech-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker logo" loading="lazy" /></span></div>
+            <div class="tech-item" data-tech="Figma"><span class="tech-glyph"><img class="tech-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma logo" loading="lazy" /></span></div>
+          </div>
+          <div class="tech-stack-row" aria-hidden="true">
+            <div class="tech-item" data-tech="HTML5"><span class="tech-glyph"><img class="tech-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="" loading="lazy" /></span></div>
+            <div class="tech-item" data-tech="CSS3"><span class="tech-glyph"><img class="tech-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="" loading="lazy" /></span></div>
+            <div class="tech-item" data-tech="JavaScript"><span class="tech-glyph"><img class="tech-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="" loading="lazy" /></span></div>
+            <div class="tech-item" data-tech="TypeScript"><span class="tech-glyph"><img class="tech-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="" loading="lazy" /></span></div>
+            <div class="tech-item" data-tech="React"><span class="tech-glyph"><img class="tech-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="" loading="lazy" /></span></div>
+            <div class="tech-item" data-tech="Next.js"><span class="tech-glyph"><img class="tech-logo tech-logo--invert" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" alt="" loading="lazy" /></span></div>
+            <div class="tech-item" data-tech="Node.js"><span class="tech-glyph"><img class="tech-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="" loading="lazy" /></span></div>
+            <div class="tech-item" data-tech="Express"><span class="tech-glyph"><img class="tech-logo tech-logo--invert" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="" loading="lazy" /></span></div>
+            <div class="tech-item" data-tech="MongoDB"><span class="tech-glyph"><img class="tech-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="" loading="lazy" /></span></div>
+            <div class="tech-item" data-tech="MySQL"><span class="tech-glyph"><img class="tech-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="" loading="lazy" /></span></div>
+            <div class="tech-item" data-tech="Python"><span class="tech-glyph"><img class="tech-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="" loading="lazy" /></span></div>
+            <div class="tech-item" data-tech="Java"><span class="tech-glyph"><img class="tech-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="" loading="lazy" /></span></div>
+            <div class="tech-item" data-tech="Git"><span class="tech-glyph"><img class="tech-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="" loading="lazy" /></span></div>
+            <div class="tech-item" data-tech="GitHub"><span class="tech-glyph"><img class="tech-logo tech-logo--invert" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="" loading="lazy" /></span></div>
+            <div class="tech-item" data-tech="Docker"><span class="tech-glyph"><img class="tech-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="" loading="lazy" /></span></div>
+            <div class="tech-item" data-tech="Figma"><span class="tech-glyph"><img class="tech-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="" loading="lazy" /></span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-block snippet-section" aria-labelledby="snippet-title">
+      <div class="section-divider">
+        <span class="divider-line"></span>
+        <span class="divider-label" id="snippet-title">Code Snippets</span>
+      </div>
+
+      <div class="snippet-grid">
+        <article class="snippet-card">
+          <div class="snippet-window">
+            <div class="snippet-window__bar">
+              <div class="snippet-window__dots" aria-hidden="true">
+                <span class="snippet-window__dot snippet-window__dot--red"></span>
+                <span class="snippet-window__dot snippet-window__dot--yellow"></span>
+                <span class="snippet-window__dot snippet-window__dot--green"></span>
+              </div>
+              <div class="snippet-window__meta">
+                <p class="snippet-window__title">train-model.py</p>
+                <p class="snippet-label">Machine Learning</p>
+              </div>
+              <div class="snippet-window__meta snippet-window__meta--end">
+                <span class="snippet-badge">Python</span>
+              </div>
+            </div>
+            <pre class="snippet-code"><code>from sklearn.model_selection import train_test_split
+from sklearn.ensemble import RandomForestClassifier
+
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y, test_size=0.2, random_state=42
+)
+
+model = RandomForestClassifier(n_estimators=200)
+model.fit(X_train, y_train)
+accuracy = model.score(X_test, y_test)</code></pre>
+            <div class="snippet-window__footer">
+              <span>~/ml/experiments</span>
+              <span>Accuracy tracked</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section-block activity-section" aria-labelledby="activity-title">
+      <div class="section-divider">
+        <span class="divider-line"></span>
+        <span class="divider-label" id="activity-title">Activity</span>
+      </div>
+
+      <div class="activity-card">
+        <div class="activity-card__header">
+          <div>
+            <p class="activity-kicker">GitHub Activity</p>
+            <h2>Real contribution graph.</h2>
+          </div>
+          <div class="activity-legend" aria-label="GitHub username">
+            <span>@Enkegithub</span>
+          </div>
+        </div>
+
+        <div class="github-graph-frame">
+          <img
+            class="github-graph-image"
+            src="https://ghchart.rshah.org/2d6e3e/Enkegithub"
+            alt="GitHub contributions graph for Enkegithub"
+          />
+        </div>
+
+        <p class="activity-note">Live GitHub contribution chart embedded for <strong>@Enkegithub</strong>.</p>
+      </div>
+    </section>
+
+    <footer class="site-footer" aria-labelledby="footer-title">
+      <div class="site-footer__divider">
+        <span class="divider-line"></span>
+        <span class="divider-label" id="footer-title">Social</span>
+      </div>
+
+      <div class="site-footer__content">
+        <p class="site-footer__copy">Connect with me across social media and professional platforms.</p>
+        <div class="site-footer__links">
+          <a href="https://www.facebook.com/nitesh.kushwaha.75457" target="_blank" rel="noreferrer">Facebook</a>
+          <a href="https://www.instagram.com/nites_kushwaha/" target="_blank" rel="noreferrer">Instagram</a>
+          <a href="https://www.linkedin.com/in/nitesh-kushwaha/" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a href="#" target="_blank" rel="noreferrer">X</a>
+          <a href="https://github.com/Enkegithub" target="_blank" rel="noreferrer">GitHub</a>
+          <a href="#" target="_blank" rel="noreferrer">YouTube</a>
+          <!-- <a href="#" target="_blank" rel="noreferrer">Threads</a> -->
+          <!-- <a href="#" target="_blank" rel="noreferrer">Portfolio Mail</a> -->
+        </div>
+      </div>
+    </footer>
+
+    <dialog class="certificate-modal" id="certificate-modal">
+      <div class="certificate-modal__content">
+        <button class="certificate-modal__close" id="certificate-modal-close" type="button" aria-label="Close">
+          Close
+        </button>
+        <p class="certificate-modal__eyebrow">Certificate Details</p>
+        <h2 id="certificate-modal-title">Certificate Title</h2>
+        <p class="certificate-modal__issuer" id="certificate-modal-issuer">Issuer</p>
+        <p class="certificate-modal__date" id="certificate-modal-date">Issued Date</p>
+        <p class="certificate-modal__id" id="certificate-modal-id">File</p>
+        <div class="certificate-modal__preview" id="certificate-modal-preview"></div>
+        <p class="certificate-modal__desc" id="certificate-modal-desc">Preview</p>
+        <a class="certificate-modal__link" id="certificate-modal-link" href="#" target="_blank" rel="noreferrer">
+          Open original file
+        </a>
+      </div>
+    </dialog>
+
+    <script src="./certificates-data.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

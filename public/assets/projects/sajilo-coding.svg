@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" fill="none">
+  <rect width="1200" height="720" rx="36" fill="#DDEAFB"/>
+  <rect x="60" y="60" width="1080" height="600" rx="28" fill="#F8FBFF" stroke="#9EBCE3" stroke-width="4"/>
+  <rect x="110" y="120" width="280" height="430" rx="30" fill="#1F2C3D"/>
+  <rect x="146" y="180" width="208" height="24" rx="12" fill="#8EC0FF"/>
+  <rect x="146" y="228" width="150" height="24" rx="12" fill="#6DA2DD"/>
+  <rect x="460" y="150" width="500" height="36" rx="18" fill="#3B5878"/>
+  <rect x="460" y="220" width="420" height="28" rx="14" fill="#A6C7EF"/>
+  <rect x="460" y="274" width="500" height="28" rx="14" fill="#C1D8F4"/>
+  <rect x="460" y="328" width="380" height="28" rx="14" fill="#D4E4F8"/>
+  <text x="110" y="640" fill="#1F2C3D" font-family="Georgia, serif" font-size="56" font-style="italic">Sajilo Coding</text>
+</svg>
