@@ -89,10 +89,16 @@ export default function PortfolioPage() {
             </p>
             <p>
               Major Products:
-              <a href='#'>IconifyAI.com</a>, <a href='#'>Thumbnails.pro</a>
+              <a href='https://omniworkspace.vercel.app/'>omniworkspace.vercel.app</a>
+               {/* <a href='#'>Thumbnails.pro</a> */}
+            </p>
+             <p>
+              Research paper:
+              <a href='https://fei.crinfoglobal.com/index.php/1/article/view/28/32'>Performance and Security Analysis of Blockchain-Based Decentralized Cloud Storage Systems</a>
+               {/* <a href='#'>Thumbnails.pro</a> */}
             </p>
             <p>
-              Contect me at
+              Contect me at:-
               <a href='mailto:niteshkushwaha484@gmail.com'>niteshkushwaha484@gmail.com</a>
             </p>
           </div>
