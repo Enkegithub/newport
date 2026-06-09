@@ -104,7 +104,7 @@ export const projects = [
     title: 'Performance and Security Analysis of Blockchain-Based Decentralized Cloud Storage Systems ',
     year: '2025',
     researchTitle: 'Performance and Security Analysis of Blockchain-Based Decentralized Cloud Storage Systems ',
-    paperLink: '#',
+    paperLink: 'https://fei.crinfoglobal.com/index.php/1/article/view/28/32',
   },
 ];
 

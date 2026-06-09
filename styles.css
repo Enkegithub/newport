@@ -12,16 +12,16 @@
   --body-font: "Avenir Next", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   --card-border: rgba(212, 205, 195, 0.82);
   --soft-border: rgba(212, 205, 195, 0.85);
-  --soft-bg: rgba(255, 255, 255, 0.76);
+  --soft-bg: rgba(30, 151, 52, 0.7);
   --soft-text: #4f5462;
   --panel-bg: linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(249, 245, 238, 0.9));
   --panel-text: #5f6574;
-  --graph-empty: #eee8df;
+  --graph-empty: black;
   --graph-1: #d8e7d6;
   --graph-2: #a9d39f;
   --graph-3: #6faf72;
   --graph-4: #2d6e3e;
-  --page-width: 660px;
+  --page-width: 670px;
 }
 
 *,
@@ -47,7 +47,7 @@ body {
 }
 
 body[data-theme="dark"] {
-  --bg: #101319;
+  --bg: #010103;
   --surface: rgba(24, 28, 36, 0.82);
   --surface-strong: rgba(29, 34, 43, 0.94);
   --text: #ece6dc;
@@ -68,9 +68,7 @@ body[data-theme="dark"] {
   --graph-3: #49a965;
   --graph-4: #88ef97;
   background:
-    radial-gradient(circle at top left, rgba(52, 61, 76, 0.58), transparent 34%),
-    radial-gradient(circle at right 20%, rgba(40, 54, 74, 0.34), transparent 26%),
-    linear-gradient(180deg, #12151b 0%, #0c0f14 100%);
+   rgba(0, 0, 0, 0.963);
 }
 
 .page-noise {

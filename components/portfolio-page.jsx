@@ -61,7 +61,7 @@ export default function PortfolioPage() {
                 <path
                   d='M9.72 12.9l1.54 1.54 3.56-4.02'
                   fill='none'
-                  stroke='#fff'
+                  stroke='#ffffff'
                   strokeLinecap='round'
                   strokeLinejoin='round'
                   strokeWidth='2'
@@ -89,11 +89,10 @@ export default function PortfolioPage() {
             </p>
             <p>
               Major Products:
-              <a href='https://omniworkspace.vercel.app/'> omniworkspace.vercel.app</a>, </br>
-              <a href='#'>sooon..</a>
+              <a href='#'>IconifyAI.com</a>, <a href='#'>Thumbnails.pro</a>
             </p>
             <p>
-              Contect me at:-
+              Contect me at
               <a href='mailto:niteshkushwaha484@gmail.com'>niteshkushwaha484@gmail.com</a>
             </p>
           </div>
@@ -154,7 +153,7 @@ export default function PortfolioPage() {
           </div>
         </section>
 
-        <section className='section-block' aria-labelledby='certificates-title'>
+        {/* <section className='section-block' aria-labelledby='certificates-title'>
           <details className='section-collapse' open>
             <summary className='section-heading section-heading--summary'>
               <div className='section-divider'>
@@ -206,7 +205,7 @@ export default function PortfolioPage() {
               </div>
             </div>
           </details>
-        </section>
+        </section> */}
 
         <section className='section-block' aria-labelledby='experiments-title'>
           <div className='section-divider'>
@@ -410,7 +409,7 @@ export default function PortfolioPage() {
           </div>
 
           <p className='activity-note'>
-            Live GitHub contribution chart embedded for <strong>@{githubUsername}</strong>.
+            GitHub contribution <strong>@{githubUsername}</strong>.
           </p>
         </div>
       </section>
