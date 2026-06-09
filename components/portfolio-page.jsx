@@ -89,7 +89,8 @@ export default function PortfolioPage() {
             </p>
             <p>
               Major Products:
-              <a href='https://omniworkspace.vercel.app/'>omniworkspace</a>, <a href='#'>sooon..</a>
+              <a href='https://omniworkspace.vercel.app/'> omniworkspace</a>,
+              <a href='#'>sooon..</a>
             </p>
             <p>
               Contect me at
