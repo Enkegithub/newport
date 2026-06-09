@@ -93,7 +93,7 @@ export default function PortfolioPage() {
               <a href='#'>sooon..</a>
             </p>
             <p>
-              Contect me at
+              Contect me at:-
               <a href='mailto:niteshkushwaha484@gmail.com'>niteshkushwaha484@gmail.com</a>
             </p>
           </div>
