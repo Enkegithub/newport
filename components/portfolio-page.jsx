@@ -89,7 +89,7 @@ export default function PortfolioPage() {
             </p>
             <p>
               Major Products:
-              <a href='#'>IconifyAI.com</a>, <a href='#'>Thumbnails.pro</a>
+              <a href='https://omniworkspace.vercel.app/'>omniworkspace</a>, <a href='#'>sooon..</a>
             </p>
             <p>
               Contect me at
