@@ -400,7 +400,7 @@ export default function PortfolioPage() {
           <div className='activity-card__header'>
             <div>
               <p className='activity-kicker'>GitHub Activity</p>
-              <h2>Real contribution graph.</h2>
+              {/* <h2>Real contribution graph.</h2> */}
             </div>
             <div className='activity-legend' aria-label='GitHub username'>
               <span>@{githubUsername}</span>
@@ -415,9 +415,9 @@ export default function PortfolioPage() {
             />
           </div>
 
-          <p className='activity-note'>
+          {/* <p className='activity-note'>
             GitHub contribution <strong>@{githubUsername}</strong>.
-          </p>
+          </p> */}
         </div>
       </section>
 
