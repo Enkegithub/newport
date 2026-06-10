@@ -40,6 +40,7 @@ export default function PortfolioPage() {
 
   return (
     <>
+    
       <div className='page-noise' aria-hidden='true'></div>
 
       <main className='portfolio-shell'>
@@ -88,18 +89,18 @@ export default function PortfolioPage() {
               APP & ML enthusiast,
             </p>
             <p>
-              Major Products:
-              <a href='https://omniworkspace.vercel.app/'>omniworkspace.vercel.app</a>
+              Major Products:-
+              <a href='https://omniworkspace.vercel.app/'> omniworkspace.vercel.app</a>
                {/* <a href='#'>Thumbnails.pro</a> */}
             </p>
              <p>
-              Research paper:
-              <a href='https://fei.crinfoglobal.com/index.php/1/article/view/28/32'>Performance and Security Analysis of Blockchain-Based Decentralized Cloud Storage Systems</a>
+              Research paper:-
+              <a href='https://fei.crinfoglobal.com/index.php/1/article/view/28/32'> Performance and Security Analysis of Blockchain-Based Decentralized Cloud Storage Systems</a>
                {/* <a href='#'>Thumbnails.pro</a> */}
             </p>
             <p>
               Contect me at:-
-              <a href='mailto:niteshkushwaha484@gmail.com'>niteshkushwaha484@gmail.com</a>
+              <a href='mailto:niteshkushwaha484@gmail.com'> niteshkushwaha484@gmail.com</a>
             </p>
           </div>
         </section>

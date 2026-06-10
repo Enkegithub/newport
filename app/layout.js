@@ -2,8 +2,8 @@ import '../styles.css';
 import Script from 'next/script';
 
 export const metadata = {
-  title: 'Nitesh',
-  description: 'A minimal editorial portfolio built with Next.js.',
+  title: 'Nitesh | Full-Stack Developer',
+  description: 'Portfolio of Nitesh Kushwaha, Full-Stack Developer, Android Developer, Flutter Developer and AI Enthusiast',
 };
 
 export default function RootLayout({ children }) {
