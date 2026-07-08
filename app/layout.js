@@ -1,16 +1,18 @@
 import '../styles.css';
 import Script from 'next/script';
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import PersonSchema from "./person-schema";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+
 export const metadata = {
   metadataBase: new URL("https://www.niteshkushwaha.com.np"),
 
   title: {
-    default: "Nitesh Kushwaha | Full Stack Developer & AI Engineer",
+    default: "Nitesh Kushwaha | Full Stack Developer, AI Engineer & Researcher",
     template: "%s | Nitesh Kushwaha",
   },
 
   description:
-    "Official portfolio of Nitesh Kushwaha. Full Stack Developer, Flutter Developer, Android Developer, AI & Machine Learning Engineer.",
+    "Official portfolio of Nitesh Kushwaha. Full Stack Developer, Flutter Developer, Android Developer, AI & Machine Learning Engineer, and Researcher.",
 
   keywords: [
     "Nitesh Kushwaha",
@@ -21,8 +23,10 @@ export const metadata = {
     "Machine Learning",
     "Artificial Intelligence",
     "AI Engineer",
-    "React Developer",
+    "Researcher",
+    "Computer Engineering",
     "Next.js",
+    "React Developer",
     "Nepal",
   ],
 
@@ -44,10 +48,14 @@ export const metadata = {
     },
   },
 
+  alternates: {
+    canonical: "https://www.niteshkushwaha.com.np",
+  },
+
   openGraph: {
-    title: "Nitesh Kushwaha | Full Stack Developer & AI Engineer",
+    title: "Nitesh Kushwaha | Full Stack Developer, AI Engineer & Researcher",
     description:
-      "Official portfolio of Nitesh Kushwaha showcasing projects, research papers, certifications, and technical skills.",
+      "Official portfolio of Nitesh Kushwaha showcasing projects, research, publications, certifications, and technical skills.",
     url: "https://www.niteshkushwaha.com.np",
     siteName: "Nitesh Kushwaha Portfolio",
     images: [
@@ -64,14 +72,10 @@ export const metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Nitesh Kushwaha | Full Stack Developer",
+    title: "Nitesh Kushwaha | Full Stack Developer & AI Engineer",
     description:
       "Official portfolio of Nitesh Kushwaha.",
     images: ["/icon.jpg"],
-  },
-
-  alternates: {
-    canonical: "https://www.niteshkushwaha.com.np",
   },
 };
 
@@ -79,12 +83,19 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body suppressHydrationWarning>
+
+        {/* Structured Data for Google */}
+        <PersonSchema />
+
         {children}
+
         <Script
           src="/portfolio-runtime.js"
           strategy="afterInteractive"
         />
+
         <SpeedInsights />
+
       </body>
     </html>
   );
