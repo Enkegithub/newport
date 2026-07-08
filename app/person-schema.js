@@ -13,8 +13,7 @@ export default function PersonSchema() {
       "https://www.linkedin.com/in/nitesh-kushwaha/",
       "https://www.instagram.com/nites_kushwaha/",
       "https://scholar.google.com/citations?user=fuyU3vEAAAAJ&hl=en",
-      "https://www.researchgate.net/profile/Nitesh-Kushwaha-4",
-      "https://www.youtube.com/@My-YOUTUBE"
+      "https://www.researchgate.net/profile/Nitesh-Kushwaha-4"
     ]
   };
 
