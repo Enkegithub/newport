@@ -1,10 +1,30 @@
 export default function sitemap() {
+  const baseUrl = "https://niteshkushwaha.com.np";
+
   return [
     {
-      url: "https://niteshkushwaha.com.np",
+      url: baseUrl,
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 1.0,
+    },
+    {
+      url: `${baseUrl}/projects`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/research`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/contact`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.7,
     },
   ];
 }
