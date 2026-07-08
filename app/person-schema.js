@@ -5,9 +5,10 @@ export default function PersonSchema() {
     name: "Nitesh Kushwaha",
     url: "https://www.niteshkushwaha.com.np",
     image: "https://www.niteshkushwaha.com.np/icon.jpg",
-    jobTitle: "Full Stack Developer & AI Engineer",
+    jobTitle: "Full Stack Developer, AI Engineer & Researcher",
     description:
-      "Full Stack Developer, Flutter Developer, Android Developer and AI Engineer.",
+      "Computer Engineering student, Full Stack Developer, AI Engineer, Flutter Developer and Researcher.",
+
     sameAs: [
       "https://github.com/Enkegithub",
       "https://www.linkedin.com/in/nitesh-kushwaha/",
