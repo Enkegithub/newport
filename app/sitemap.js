@@ -1,6 +1,5 @@
 export default function sitemap() {
-  const baseUrl = "https://niteshkushwaha.com.np";
-
+  const baseUrl = "https://www.niteshkushwaha.com.np";
   return [
     {
       url: baseUrl,
