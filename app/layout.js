@@ -13,22 +13,26 @@ export const metadata = {
 
   description:
     "Official portfolio of Nitesh Kushwaha. Full Stack Developer, Flutter Developer, Android Developer, AI & Machine Learning Engineer, and Researcher.",
-
-  keywords: [
-    "Nitesh Kushwaha",
-    "Nitesh Kushwaha Portfolio",
-    "Full Stack Developer",
-    "Flutter Developer",
-    "Android Developer",
-    "Machine Learning",
-    "Artificial Intelligence",
-    "AI Engineer",
-    "Researcher",
-    "Computer Engineering",
-    "Next.js",
-    "React Developer",
-    "Nepal",
-  ],
+keywords: [
+  "Nitesh Kushwaha",
+  "Nitesh Kushwaha Portfolio",
+  "Nitesh Kushwaha Nepal",
+  "Nitesh Kushwaha Developer",
+  "Full Stack Developer Nepal",
+  "Flutter Developer Nepal",
+  "Android Developer Nepal",
+  "AI Engineer Nepal",
+  "Machine Learning Engineer Nepal",
+  "Artificial Intelligence Nepal",
+  "Researcher Nepal",
+  "Computer Engineering Nepal",
+  "Next.js Developer Nepal",
+  "React Developer Nepal",
+  "Best Developer in Nepal",
+  "Top AI Developer Nepal",
+  "Nepal Software Engineer",
+  "Nepal Tech Portfolio",
+],
 
   authors: [{ name: "Nitesh Kushwaha" }],
 
